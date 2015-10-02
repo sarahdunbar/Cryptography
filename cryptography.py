@@ -50,11 +50,6 @@ def efunction (i, m, k):
         key2[x] = l
     cryptolist(letter2, key2)
 
-       
-       
-       
-    
-
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 x = 0
 while x == 0:
