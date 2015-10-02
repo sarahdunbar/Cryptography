@@ -9,4 +9,28 @@ Write and submit a program that encrypts and decrypts user data.
 
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
+
+def efunction (i, m, k):
+   letters = i.split("")
+   print(letters)
+    
+
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
+x = 0
+while x == 0:
+    i = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+    if i == "e" or i == "d":
+        m = input("Message: ")
+        k = input("Key: ")
+        if i == "e":
+            efunction (i, m, k)
+        if i == "d":
+            dfunction (i, m, k)
+    elif i == "q":
+        print ("Goodbye!")
+        x = 1
+    else:
+        print ("Did not understand command, try again.")
+        print (" ")
+    
+        
