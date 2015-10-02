@@ -11,8 +11,14 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 
 def efunction (i, m, k):
-   letters = i.split("")
+   letters = list(m)
+   r = len(letters)
+   letter2 = letters[:]
    print(letters)
+   for x in range (0, r+1):
+       p = (x)
+       
+       
     
 
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
