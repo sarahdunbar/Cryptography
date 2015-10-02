@@ -11,12 +11,16 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 
 def efunction (i, m, k):
-   letters = list(m)
-   r = len(letters)
-   letter2 = letters[:]
-   print(letters)
-   for x in range (0, r+1):
-       p = (x)
+    letters = list(m)
+    r = len(letters)
+    letter2 = letters[:]
+    print(letters)
+    for x in range (0, r):
+        p = letters[x]
+        l = associations.find(p)
+        letter2[x] = l
+    print(letter2)
+       
        
        
     
