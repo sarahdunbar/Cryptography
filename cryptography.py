@@ -40,6 +40,9 @@ def cryptolist(letter2, key2):
         if rp == True:
             valuem = letter2[x]
             valuen = key2[z]
+        else:
+            valuem = letter2[x]
+            valuen = key2[x]
         if np == True:
             valuem = letter2[z]
             valuen = key2[x]
