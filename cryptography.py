@@ -72,6 +72,7 @@ def efunction (i, m, k):
     for x in range(0, l):
         g = listreal[x]
         p = associations[g]
+        #loop here!!!
         listlet[x] = p
     print(listlet)
     return listlet
