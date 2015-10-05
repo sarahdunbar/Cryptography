@@ -19,18 +19,36 @@ def cryptolist(letter2, key2):
     if r < k:
         range1 = k
         listreal = key2[:]
-    if r = k:
+    if r == k:
         range1 = k
         listreal = key2[:]
+    rp = False
+    np = False
+    z = 0
+    print(letter2)
+    print(key2)
     for x in range(0, range1):
-        if x > r:
-            x = x - r - 1
-        if x > k:
-            x = x - k - 1
-        valuem = letter2[x]
-        valuen = key2[x]
+        if x >= r:
+            z = x%r
+            np = True
+        if x >= k:
+            print (x)
+            print(k)
+            z = x%k
+            print(z)
+            rp = True
+        if rp == True:
+            valuem = letter2[x]
+            valuen = key2[z]
+        if np == True:
+            valuem = letter2[z]
+            valuen = key2[x]
+        else:
+            valuem = letter2[x]
+            valuen = key2[x]
         valueg = valuem + valuen
         listreal[x] = valueg
+    print(listreal)
     
 
 def efunction (i, m, k):
