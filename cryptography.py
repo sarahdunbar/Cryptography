@@ -33,10 +33,7 @@ def cryptolist(letter2, key2):
             z = x%r
             np = True
         if x >= k:
-            print (x)
-            print(k)
             z = x%k
-            print(z)
             rp = True
         if rp == True:
             valuem = letter2[x]
@@ -51,7 +48,7 @@ def cryptolist(letter2, key2):
             valuen = key2[x]
         valueg = valuem + valuen
         listreal[x] = valueg
-    print(listreal)
+    return listreal
     
 
 def efunction (i, m, k):
@@ -69,7 +66,16 @@ def efunction (i, m, k):
         p = letterkey[x]
         l = associations.find(p)
         key2[x] = l
-    cryptolist(letter2, key2)
+    listreal = cryptolist(letter2, key2)
+    listlet = listreal[:]
+    l = len(listreal)
+    for x in range(0, l):
+        g = listreal[x]
+        p = associations[g]
+        listlet[x] = p
+    print(listlet)
+    return listlet
+        
 
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 x = 0
@@ -79,7 +85,9 @@ while x == 0:
         m = input("Message: ")
         k = input("Key: ")
         if i == "e":
-            efunction (i, m, k)
+            listlet = efunction (i, m, k)
+            stre = ''.join(listlet)
+            print(stre)
         if i == "d":
             dfunction (i, m, k)
     elif i == "q":
