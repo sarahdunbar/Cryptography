@@ -25,6 +25,7 @@ def cryptolist(letter2, key2):
     rp = False
     np = False
     z = 0
+    j = 0
     print(letter2)
     print(key2)
     for x in range(0, range1):
@@ -40,13 +41,12 @@ def cryptolist(letter2, key2):
         if rp == True:
             valuem = letter2[x]
             valuen = key2[z]
-        else:
-            valuem = letter2[x]
-            valuen = key2[x]
+            j = 1
         if np == True:
             valuem = letter2[z]
             valuen = key2[x]
-        else:
+            j = 1
+        if j == 0:
             valuem = letter2[x]
             valuen = key2[x]
         valueg = valuem + valuen
