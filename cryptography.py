@@ -10,36 +10,26 @@ Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 
+
     
 def assoc(listreal):
-    sieben = list(associations)
-    t = False
     r = False
-    m = False
-    l = len(listreal)
-    z = len(sieben)
-    if l > z:
-        p = l
-        listlet = listreal[:]
-    if l < z:
-        p = z
-        listlet = sieben[:]
-    if l == z:
-        p = z
-        m = True
-        listlet = sieben[:]
-    for x in (0, p):
-        if x >= z:
-            w = x%z
-            t = True
-        if x >= l:
-            w = x%l
-            t = True
-        if t == True:
-            listlet[w] =
-        
-        
-
+    print(listreal)
+    associ = list(associations)
+    listnuma = 85
+    r = associ[84]
+    print(r)
+    listnuml = len(listreal)
+    listlet = listreal[:]
+    for g in range (0, listnuml):
+        x = listreal[g]
+        if x > 84:
+            w = x - 85
+            listlet[g] = associations[w]
+        if x < 84:
+            listlet[g] = associations[x]
+    return listlet
+            
 def cryptolist(letter2, key2):
     r = len(letter2)
     k = len(key2)
@@ -97,6 +87,7 @@ def efunction (i, m, k):
     listreal = cryptolist(letter2, key2)
     listlet = assoc(listreal)
     return listlet
+
         
 
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
@@ -109,7 +100,7 @@ while x == 0:
         if i == "e":
             listlet = efunction (i, m, k)
             stre = ''.join(listlet)
-            print(stre)
+            
         if i == "d":
             dfunction (i, m, k)
     elif i == "q":
