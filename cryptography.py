@@ -56,8 +56,6 @@ def cryptolist(letter2, key2):
     np = False
     z = 0
     j = 0
-    print(letter2)
-    print(key2)
     for x in range(0, range1):
         if x >= r:
             z = x%r
