@@ -4,7 +4,7 @@ Author: Sarah Dunbar
 Credit: none
 Assignment:
 
-Write and submit a program that encrypts and decrypts user data.
+Write and submit a program that encrypts and decrypts user data. 
 
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
