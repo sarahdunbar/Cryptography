@@ -1,8 +1,7 @@
 """
 cryptography.py
-Author: <your name here>
-Credit: <list sources used, if any>
-
+Author: Sarah Dunbar
+Credit: none
 Assignment:
 
 Write and submit a program that encrypts and decrypts user data.
