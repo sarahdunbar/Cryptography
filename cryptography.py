@@ -10,6 +10,36 @@ Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 
+    
+def assoc(listreal):
+    sieben = list(associations)
+    t = False
+    r = False
+    m = False
+    l = len(listreal)
+    z = len(sieben)
+    if l > z:
+        p = l
+        listlet = listreal[:]
+    if l < z:
+        p = z
+        listlet = sieben[:]
+    if l = z:
+        p = z
+        m = True
+        listlet = sieben[:]
+    for x in (0, p):
+        if x >= z:
+            w = x%z
+            t = True
+        if x >= l:
+            w = x%l
+            t = True
+        if t = True:
+            listlet[w] = 
+        
+        
+
 def cryptolist(letter2, key2):
     r = len(letter2)
     k = len(key2)
@@ -67,14 +97,7 @@ def efunction (i, m, k):
         l = associations.find(p)
         key2[x] = l
     listreal = cryptolist(letter2, key2)
-    listlet = listreal[:]
-    l = len(listreal)
-    for x in range(0, l):
-        g = listreal[x]
-        p = associations[g]
-        #loop here!!!
-        listlet[x] = p
-    print(listlet)
+    listlet = assoc(listreal)
     return listlet
         
 
