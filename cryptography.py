@@ -12,13 +12,8 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 
 
     
-def assoc(listreal):
+def assoc(listreal, d):
     r = False
-    print(listreal)
-    associ = list(associations)
-    listnuma = 85
-    r = associ[84]
-    print(r)
     listnuml = len(listreal)
     listlet = listreal[:]
     for g in range (0, listnuml):
@@ -30,7 +25,7 @@ def assoc(listreal):
             listlet[g] = associations[x]
     return listlet
             
-def cryptolist(letter2, key2):
+def cryptolist(letter2, key2, d):
     r = len(letter2)
     k = len(key2)
     if r > k:
@@ -64,12 +59,16 @@ def cryptolist(letter2, key2):
         if j == 0:
             valuem = letter2[x]
             valuen = key2[x]
-        valueg = valuem + valuen
-        listreal[x] = valueg
+        if d == False:
+            valueg = valuem + valuen
+            listreal[x] = valueg
+        if d == True:
+            valueg = valuem - valuen
+            listreal[x] = valueg
     return listreal
     
 
-def efunction (i, m, k):
+def efunction (i, m, k, d):
     letters = list(m)
     letterkey = list(k)
     r = len(letters)
@@ -84,11 +83,9 @@ def efunction (i, m, k):
         p = letterkey[x]
         l = associations.find(p)
         key2[x] = l
-    listreal = cryptolist(letter2, key2)
-    listlet = assoc(listreal)
+    listreal = cryptolist(letter2, key2, d)
+    listlet = assoc(listreal, d)
     return listlet
-
-        
 
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 x = 0
@@ -97,12 +94,18 @@ while x == 0:
     if i == "e" or i == "d":
         m = input("Message: ")
         k = input("Key: ")
+        d = False
         if i == "e":
-            listlet = efunction (i, m, k)
+            listlet = efunction (i, m, k, d)
             stre = ''.join(listlet)
-            
+            print(stre)
+            print (" ")
         if i == "d":
-            dfunction (i, m, k)
+            d = True
+            listlet = efunction (i, m, k, d)
+            stre = ''.join(listlet)
+            print(stre)
+            print(" ")
     elif i == "q":
         print ("Goodbye!")
         x = 1
