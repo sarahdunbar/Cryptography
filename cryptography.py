@@ -24,7 +24,7 @@ def assoc(listreal):
     if l < z:
         p = z
         listlet = sieben[:]
-    if l = z:
+    if l == z:
         p = z
         m = True
         listlet = sieben[:]
@@ -35,8 +35,8 @@ def assoc(listreal):
         if x >= l:
             w = x%l
             t = True
-        if t = True:
-            listlet[w] = 
+        if t == True:
+            listlet[w] =
         
         
 
